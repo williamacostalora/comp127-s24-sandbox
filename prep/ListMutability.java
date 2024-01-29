@@ -6,23 +6,41 @@ import java.util.ArrayList;
 
 public class ListMutability {
     public static void main(String[] args) {
-        List<String> list1 = List.of("AA", "BB", "CC");
-        // List<String> list1 = new ArrayList<>(List.of("AA", "BB", "CC"));
-        System.out.println("init\t" + list1);
+        List<Integer> list1 = List.of(10, 20, 30);
+        // List<Integer> list1 = new ArrayList<>(List.of(10, 20, 30));
+       
+
+        System.out.println("Before:\t" + list1);
+        System.out.println("Sum = " + sum(list1));
+        System.out.println("After:\t" + list1);
         
-
-        // can we add to it?
-        list1.add("DD");
-        System.out.println("add\t" + list1);
-
-
-        // can we remove from it?
-        list1.remove(0);
-        System.out.println("remove\t" + list1);
-
-
-        // can we modify it?
-        list1.set(0, "FF");
-        System.out.println("set\t" + list1);
+        System.out.println();
+        
+        System.out.println("Before:\t" + list1);
+        System.out.println("Sum = " + sumM(list1));
+        System.out.println("After:\t" + list1);
     }
+
+
+    // sums the list and did not change its elements
+    public static int sum(List<Integer> list) {
+        int sum = 0;
+        for (Integer item : list) {
+            sum += item;
+        }
+
+        return sum;
+    } 
+
+    
+    // sum the list but changes its elements
+    public static int sumM(List<Integer> list) {
+        int sum = 0;
+        for(int i = 0; i<list.size(); i++) {
+            sum += list.get(i);
+            list.set(i, 0);
+        }
+
+        return sum;
+    } 
 }
