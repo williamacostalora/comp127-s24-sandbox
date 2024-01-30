@@ -8,7 +8,6 @@ public class ListMutability {
         // List<Integer> accounts = List.of(10, 20, 30);
         List<Integer> accounts = new ArrayList<>(List.of(10, 20, 30));
        
-
         System.out.println("Before:\t" + accounts);
         System.out.println("Sum = " + sum(accounts));
         System.out.println("After:\t" + accounts);
