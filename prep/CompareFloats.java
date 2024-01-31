@@ -1,5 +1,6 @@
 package prep;
 
+
 public class CompareFloats {
     public static void main(String[] args) {
         double x = 1f/3f + 2f/3f;

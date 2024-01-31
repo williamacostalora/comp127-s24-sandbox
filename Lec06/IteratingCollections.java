@@ -1,17 +1,16 @@
-package prep;
+package Lec06;
 
-import java.util.List;
-import java.lang.reflect.Array;
 import java.util.Iterator;
+import java.util.List;
 
-public class InteratingArrays {
+public class IteratingCollections {
     public static void main(String[] args) {
-        int[] nums = {10, 20, 30};
-        System.out.println((Object) nums instanceof Iterable);
+        List<Integer> nums = List.of(10, 20, 30);
+        // System.out.println(nums instanceof Iterable);
 
         /* loop */
-        // for(int i=0; i<nums.length; i++) {
-        //     System.out.println(nums[i]);
+        // for(int i=0; i<nums.size(); i++) {
+        //     System.out.println(nums.get(i));
         // }
 
         /* for-each */
