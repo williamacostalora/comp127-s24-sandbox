@@ -13,7 +13,7 @@ public class EnumeratedType {
         System.out.println(stu1Grade.name());
 
         EnumeratedType.Grade2[0] = "Aminus";
-        EnumeratedType.Grade2 = {"Aminus"};
+        // EnumeratedType.Grade2 = {"Aminus"};
         String stu2Grade = Grade2[0];
         System.out.println(stu2Grade);
     }
