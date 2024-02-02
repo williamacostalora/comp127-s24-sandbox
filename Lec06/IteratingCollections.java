@@ -6,7 +6,7 @@ import java.util.List;
 public class IteratingCollections {
     public static void main(String[] args) {
         List<Integer> nums = List.of(10, 20, 30);
-        // System.out.println(nums instanceof Iterable);
+        System.out.println(nums instanceof Iterable);
 
         /* loop */
         // System.out.println("--- FOR ---");
