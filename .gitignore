@@ -1,2 +1,15 @@
 
 *.class
+
+.gradle
+**/build/
+
+# IDE-specific config (IDEs can generate from Gradle config)
+.idea
+.classpath
+.project
+.settings/*
+!.settings/org.eclipse.jdt.core.prefs
+.vscode/*
+!.vscode/settings.json
+bin
