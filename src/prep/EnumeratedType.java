@@ -1,4 +1,4 @@
-package prep;
+package src.prep;
 
 enum Grade {A, B, C, D, F}
 

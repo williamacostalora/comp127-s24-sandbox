@@ -1,4 +1,4 @@
-package section1;
+package src.section1;
 
 public class Toaster {
     private boolean onstatus;

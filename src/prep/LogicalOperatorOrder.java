@@ -1,4 +1,4 @@
-package prep;
+package src.prep;
 
 /**
  * A practice for the order of logical operator

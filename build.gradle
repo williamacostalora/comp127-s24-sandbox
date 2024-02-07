@@ -10,4 +10,4 @@ dependencies {
     implementation group: 'com.github.mac-comp127', name: 'kilt-graphics', version: '1.+'
 }
 
-sourceSets.main.java.srcDirs = ['Graphics']
+sourceSets.main.java.srcDirs = ['src']

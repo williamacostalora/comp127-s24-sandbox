@@ -1,4 +1,4 @@
-package Lec06;
+package src;
 
 /**
  * Read values from the use 
