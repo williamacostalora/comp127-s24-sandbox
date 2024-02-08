@@ -1,4 +1,4 @@
-package src.Lec06;
+package Lec06;
 
 public class RecursiveSum {
     /**

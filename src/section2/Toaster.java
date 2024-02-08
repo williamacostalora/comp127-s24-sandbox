@@ -1,4 +1,4 @@
-package src.section2;
+package section2;
 
 public class Toaster {
     private int capacity;

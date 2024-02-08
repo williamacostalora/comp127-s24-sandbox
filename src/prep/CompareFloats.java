@@ -1,4 +1,4 @@
-package src.prep;
+package prep;
 
 
 public class CompareFloats {

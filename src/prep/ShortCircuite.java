@@ -1,4 +1,4 @@
-package src.prep;
+package prep;
 
 /**
  * A practice for && and || logical operators are short-circited in Java

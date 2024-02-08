@@ -1,5 +1,3 @@
-package src;
-
 /**
  * Read values from the use 
  */

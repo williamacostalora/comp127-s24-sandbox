@@ -1,4 +1,4 @@
-package src.prep;
+package prep;
 
 import java.util.Scanner;
 

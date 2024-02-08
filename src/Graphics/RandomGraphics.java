@@ -1,3 +1,5 @@
+package Graphics;
+
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.ui.Button;
 

@@ -1,4 +1,4 @@
-package src.Lec06;
+package Lec06;
 
 import java.util.Iterator;
 import java.util.List;
