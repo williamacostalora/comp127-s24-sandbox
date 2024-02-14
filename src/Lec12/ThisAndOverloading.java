@@ -15,6 +15,9 @@ class Boo {
     // the other constructor but different number of parameter, this one
     // does not take any parameter
     public Boo() {
+        // foo = 1000;  // I can use this but it would be better to call the more
+                        // generic constructor in case that I am doing something
+                        // hence, I don't repeat myself
         this(1000);
     }
 
