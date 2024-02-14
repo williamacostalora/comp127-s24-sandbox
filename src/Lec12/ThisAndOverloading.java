@@ -17,6 +17,15 @@ class Boo {
     public Boo() {
         this(1000);
     }
+
+
+    // this is another example that show the use of the "this" reference
+    // although not neccessory here but makes the code clearer
+    public boolean areSame(Boo anotherBoo) {
+        return this.foo == anotherBoo.foo;
+        // or
+        // return foo == anotherBoo.foo;
+    }
 }
 
 public class ThisAndOverloading {
@@ -25,5 +34,7 @@ public class ThisAndOverloading {
         // because the class has two constructors
         Boo boo1 = new Boo(10);
         Boo boo2 = new Boo();
+
+        System.out.println(boo1.areSame(boo2));
     }
 }
