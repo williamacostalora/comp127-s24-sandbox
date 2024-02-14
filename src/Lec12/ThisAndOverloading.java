@@ -26,6 +26,11 @@ class Boo {
         // or
         // return foo == anotherBoo.foo;
     }
+
+    // overloaded method, it takes int parameter instead of Boo parameter
+    public boolean areSame(int val) {
+        return this.foo == val;
+    }
 }
 
 public class ThisAndOverloading {
