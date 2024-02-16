@@ -1,4 +1,4 @@
-package Lab11;
+package Lec11;
 
 public class VoidMethod {
     public static void something(int x) {
