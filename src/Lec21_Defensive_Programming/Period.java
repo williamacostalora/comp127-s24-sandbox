@@ -35,7 +35,7 @@ public final class Period {
     }
 
     public static void main(String[] args) {
-        Period p = new Period(new DateTime(), new Date(2024, 3, 10));
+        Period p = new Period(new Date(2024, 3, 10), new Date(2024, 3, 10));
         System.out.println(p.getStart());
     }
 }
