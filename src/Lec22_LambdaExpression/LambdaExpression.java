@@ -32,13 +32,13 @@ class TimeGreeter extends Greeter {
     }
 
 
-    public void timeGreet_lambdaExpressionMinimalSyntax() {
-        Timer t = new Timer(1000, ae -> System.out.println("Hello COMP127 from TimeGreeter.timeGreet_lambdaExpressionMinimalSyntax"));
+    public void timeGreet_lambdaExpressionSyntacticSugar() {
+        Timer t = new Timer(1000, ae -> System.out.println("Hello COMP127 from TimeGreeter.timeGreet_lambdaExpressionSyntacticSugar"));
         t.start();
     }
     
-    public void timeGreet_lambdaExpressionMinimalSyntax_StoredFirst() {
-        ActionListener al = ae -> System.out.println("Hello COMP127 from TimeGreeter.timeGreet_lambdaExpressionMinimalSyntax_StoredFirst");
+    public void timeGreet_lambdaExpressionSyntacticSugar_StoredFirst() {
+        ActionListener al = ae -> System.out.println("Hello COMP127 from TimeGreeter.timeGreet_lambdaExpressionSyntacticSugar_StoredFirst");
         Timer t = new Timer(1000, al);
         t.start();
     }
@@ -74,8 +74,8 @@ public class LambdaExpression {
     public static void main(String[] args) throws InterruptedException, IOException {
         new TimeGreeter().timeGreet_lambdaExpressionFullSyntax();
         new TimeGreeter().timeGreet_lambdaExpressionFullSyntax_StoredFist();
-        new TimeGreeter().timeGreet_lambdaExpressionMinimalSyntax();
-        new TimeGreeter().timeGreet_lambdaExpressionMinimalSyntax_StoredFirst();
+        new TimeGreeter().timeGreet_lambdaExpressionSyntacticSugar();
+        new TimeGreeter().timeGreet_lambdaExpressionSyntacticSugar_StoredFirst();
         new TimeGreeter().timeGreet_methodReferenceClass();
         new TimeGreeter().timeGreet_methodReferenceParent();
         new TimeGreeter().timeGreet_oldApproach();
