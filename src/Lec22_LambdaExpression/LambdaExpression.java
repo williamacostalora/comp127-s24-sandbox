@@ -1,9 +1,7 @@
 package Lec22_LambdaExpression;
 
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.io.IOException;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import javax.swing.Timer;
 
@@ -59,7 +57,8 @@ class TimeGreeter extends Greeter {
 
     public void timeGreet_oldApproach() {
         ActionEventImplementer aei = new ActionEventImplementer();
-        Timer t = new Timer(1000, aei);
+        Timer t = new Timer(1000, aei);   // the timer object will call the implemented 
+                                                // method in ActionListener interface
         t.start();
     }
 
