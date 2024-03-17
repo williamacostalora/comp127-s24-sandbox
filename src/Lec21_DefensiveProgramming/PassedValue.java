@@ -1,4 +1,4 @@
-package Lec21_Defensive_Programming;
+package Lec21_DefensiveProgramming;
 
 public class PassedValue {
     public static int sumArray(int[] array) {
