@@ -1,4 +1,4 @@
-package Lec22_LambdaExpression;
+package Lec22_LambdaExpression_Prep;
 
 import java.awt.event.ActionListener;
 import java.io.IOException;
