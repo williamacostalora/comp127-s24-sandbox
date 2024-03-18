@@ -20,6 +20,23 @@ public class RounderPrinterDriver {
                 System.out.println("{{{ " + s + "}}}");
             }
         });
+
+        RounderPrinter.round2PrintDecorated(f, (String s) -> {
+            System.out.println("::: " + s + ":::");
+        });
+
+        
+        RounderPrinter.round2PrintDecorated(f, s -> {
+            System.out.println("::: " + s + ":::");
+        });
+        
+        RounderPrinter.round2PrintDecorated(f, s -> System.out.println("::: " + s + ":::"));
+        
+        RounderPrinter.round2PrintDecorated(f, RounderPrinterDriver::printDollar);
+    }
+
+    public static void printDollar(String s) {
+        System.out.println("$$$ " + s + " $$$");
     }
 
     static class SquareDecorator implements Decorable {
