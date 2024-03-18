@@ -10,5 +10,22 @@ public class RounderPrinterDriver {
         
         Decorable ad = new AngleDecorator();
         RounderPrinter.round2PrintDecorated(f, ad);
+        
+        Decorable sd = new SquareDecorator();
+        RounderPrinter.round2PrintDecorated(f, sd);
+
+        RounderPrinter.round2PrintDecorated(f, new Decorable() {
+            @Override
+            public void decorate(String s) {
+                System.out.println("{{{ " + s + "}}}");
+            }
+        });
+    }
+
+    static class SquareDecorator implements Decorable {
+        @Override
+        public void decorate(String s) {
+            System.out.println("[[[ " + s + "]]]");
+        }
     }
 }
