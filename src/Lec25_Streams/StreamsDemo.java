@@ -7,28 +7,31 @@ import static java.util.stream.Collectors.toList;
 
 public class StreamsDemo {
     public static void main(String[] args) {
-        long startTime = System.nanoTime();
-        List<Student> students = generateRandomStudents(1_000_000);
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime)/1000000;
+        long startTime, endTime;
         
-        System.out.println("Number of students: " + students.size() + 
-                           " (" + duration + "ms)");
+        // generate some students
+        startTime = System.nanoTime();
+        List<Student> students = generateRandomStudents(100_000);
+        endTime = System.nanoTime();
+        printExecutionSummary(startTime, endTime, 
+                              students, 
+                              "Initial number of students");        
 
+        // students with GPA less than 2.0, non-parallel fashion
         startTime = System.nanoTime();
         List<Student> lowGpaStudents = getLowGpaStudents(students);
         endTime = System.nanoTime();
-        duration = (endTime - startTime)/1000000;
-        System.out.println("Number of low GPA students: " + lowGpaStudents.size() + 
-                           " (" + duration + "ms)");
+        printExecutionSummary(startTime, endTime, 
+                              lowGpaStudents, 
+                              "NP, Number of low GPA students");
 
+        // students with GPA less than 2.0, parallel fashion
         startTime = System.nanoTime();
-        List<Student> lowGpaStudents2 = getLowGpaStudents2(students);
+        List<Student> lowGpaStudents2 = getLowGpaStudents_parallel(students);
         endTime = System.nanoTime();
-        duration = (endTime - startTime)/1000000;
-        System.out.println("Number of low GPA students: " + lowGpaStudents2.size() + 
-                            " (" + duration + "ms)");
-
+        printExecutionSummary(startTime, endTime, 
+                              lowGpaStudents2, 
+                              " P, Number of low GPA students");
     }
     
     private static List<Student> generateRandomStudents(int num) {
@@ -42,15 +45,22 @@ public class StreamsDemo {
         return students;
     }
 
-    public static List<Student> getLowGpaStudents(List<Student> students) {
+    private static List<Student> getLowGpaStudents(List<Student> students) {
         return students.stream()
                        .filter(s -> s.getGpa() <= 2.0)
                        .collect(toList());
     }
 
-    public static List<Student> getLowGpaStudents2(List<Student> students) {
+    private static List<Student> getLowGpaStudents_parallel(List<Student> students) {
         return students.parallelStream()
                        .filter(s -> s.getGpa() <= 2.0)
                        .collect(toList());
+    }
+
+    private static void printExecutionSummary(long startTime, long endTime, 
+                                              List<Student> students,
+                                              String label) {
+        long duration = (endTime - startTime)/1000000;
+        System.out.println(label + ": " + students.size() + " (" + duration + "ms)");
     }
 }
