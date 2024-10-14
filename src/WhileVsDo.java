@@ -1,5 +1,3 @@
-package Lec06;
-
 /**
  * Read values from the use 
  */

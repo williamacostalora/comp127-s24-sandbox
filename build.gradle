@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation group: 'com.github.mac-comp127', name: 'kilt-graphics', version: '1.+'
+}
+
+sourceSets.main.java.srcDirs = ['src']
